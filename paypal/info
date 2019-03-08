@@ -16,3 +16,16 @@ https://developer.paypal.com/docs/api/orders/v2/#orders_create
 
 transactionID
 6M345821UY006303M
+
+
+SMART INTEGRATION
+https://developer.paypal.com/demo/checkout/#/pattern/client
+
+samples
+
+
+https://github.com/paypal/paypal-checkout-components
+
+http://paypal.github.io/PayPal-PHP-SDK/sample/
+
+https://github.com/paypal/PayPal-PHP-SDK/tree/master/sample
