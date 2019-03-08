@@ -1,5 +1,5 @@
 <?php
-require("../../../vendor/autoload.php");
+require("../../vendor/autoload.php");
 $gateway = new Braintree_Gateway([
   'environment' => 'sandbox',
   'merchantId' => 'bbq62j65z2r92hgj',
