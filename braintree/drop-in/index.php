@@ -84,13 +84,6 @@ body {
     braintree.dropin.create({
       authorization: client_token,
       selector: '#dropin-container'
-    /*,
-    paypal: {
-      flow: 'checkout',
-      amount: '10.00',
-      currency: 'GBP'
-    }*/
-
   }, function (createErr, instance) {
     if (createErr) {
       console.log('Create Error', createErr);
