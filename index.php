@@ -13,8 +13,8 @@
 		<h1>Home</h1>
 		<h2>PayPal</h2>
 		<ul>
-			<li><a href="<?php echo $baseUrl;?>paypal/express-checkout/" target="_self">Express Checkout</a></li>
-			<li><a href="#" target="_self">Link</a></li>			
+			<li><a href="<?php echo $baseUrl;?>paypal/client/" target="_self">Client Integration</a></li>
+			<li><a href="<?php echo $baseUrl;?>paypal/server/" target="_self">Server Integration</a></li>	
 		</ul>
 		<h2>Braintree</h2>
 		<ul>

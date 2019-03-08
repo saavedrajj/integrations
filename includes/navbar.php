@@ -13,8 +13,8 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paypal</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo $baseUrl;?>paypal/express-checkout/">Express Checkout</a>
-          <a class="dropdown-item" href="#">Links</a>
+          <a class="dropdown-item" href="<?php echo $baseUrl;?>paypal/client/">Client Integration</a>
+          <a class="dropdown-item" href="<?php echo $baseUrl;?>paypal/server/">Server Integration</a>
         </div>
       </li>
       <li class="nav-item dropdown">
