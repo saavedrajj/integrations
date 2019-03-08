@@ -1,0 +1,28 @@
+saavedrajj_uk_sandbox
+
+tokenization key:
+sandbox_9cmsmsws_bbq62j65z2r92hgj
+
+
+
+BraintreeGateway gateway = new BraintreeGateway(
+  Environment.SANDBOX,
+  "bbq62j65z2r92hgj",
+  "rd72tbf2qq2vqgt5",
+  "92566680d9150f5fd30331c60dc72198"
+);
+
+
+Drop-In UI
+https://developers.braintreepayments.com/guides/drop-in/setup-and-integration/javascript/v3
+
+Hosted fields
+https://developers.braintreepayments.com/guides/hosted-fields/setup-and-integration/javascript/v3
+https://developers.braintreepayments.com/guides/hosted-fields/examples/javascript/v3
+
+
+
+
+
+http://127.0.0.1/checkout/braintree/drop-in/transaction.php?id=e2mz4nnc
+http://127.0.0.1/checkout/braintree/drop-in/transaction.php?id=gnhk7z1y
