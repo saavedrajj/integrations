@@ -3,8 +3,6 @@ require_once("../../includes/braintree-credentials.php");
 
 $amount = $_POST["amount"];
 $nonce = $_POST["payment_method_nonce"];
-//echo "amount: " . $amount . "<br>";
-//echo "nonce: " . $nonce . "<br>";
 
 $result = $gateway->transaction()->sale([
     'amount' => $amount,
