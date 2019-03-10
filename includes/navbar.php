@@ -1,5 +1,4 @@
 <?php $baseUrl =  "https://" .$_SERVER['SERVER_NAME'] . "/integrations/"; ?>
-<?php /*include "<?php echo $baseUrl;?>includes/common.php";*/ ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Integrations</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +27,6 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stripe</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<?php echo $baseUrl;?>stripe/checkout/">Checkout</a>
-          <a class="dropdown-item" href="<?php echo $baseUrl;?>stripe/card-payments/">Card Payments</a>
         </div>
       </li>      
     </ul>

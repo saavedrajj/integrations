@@ -23,8 +23,7 @@
 		</ul>
 		<h2>Stripe</h2>
 		<ul>
-			<li><a href="<?php echo $baseUrl;?>stripe/checkout/" target="_self">Checkout</a></li>
-			<li><a href="<?php echo $baseUrl;?>stripe/card-payments/" target="_self">Card Payments</a></li>			
+			<li><a href="<?php echo $baseUrl;?>stripe/checkout/" target="_self">Checkout</a></li>		
 		</ul>		
 		<h2>Instagram</h2>
 			<li>Coming soon</li>				

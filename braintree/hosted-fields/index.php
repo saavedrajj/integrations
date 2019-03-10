@@ -85,7 +85,6 @@
       }, function (hostedFieldsErr, hostedFieldsInstance) {
         if (hostedFieldsErr) {
           console.error(hostedFieldsErr);
-            //document.querySelector('#errorMessage').value = hostedFieldsErr;
             return;
           }
           submit.removeAttribute('disabled');

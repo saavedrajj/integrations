@@ -20,26 +20,26 @@
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: '0.02'
+            value: '0.12'
           }
         }]
       });
     },
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('Transaction completed by ' + details.payer.name.given_name);
-        console.log(details);
+        //alert('Transaction completed by ' + details.payer.name.given_name);
+        window.location.href = 'transaction.php?' + details.id;
+        //console.log(details);
         // Call your server to save the transaction
-        return fetch('checkout.php', {
+        /*return fetch('checkout.php', {
           method: 'post',
           body: JSON.stringify({
             orderID: data.orderID
           })
-        });
+        });*/
       });
     }
   }).render('#paypal-button-container');
-</script>
 </script>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,4 +1,4 @@
 <?php
-$orderID= $_POST["orderID"];
-echo "orderID: " . $orderID . "<br>";
+//$orderID= $_POST["orderID"];
+//echo "orderID: " . $orderID . "<br>";
  ?>
