@@ -38,7 +38,7 @@ $amount = str_replace(array('.', ','), '' ,$_POST['amount']);
     <h2>Checkout</h2>
 
       <h3>Succesful payment!</h1>
-      <p>Your test transaction has been successfully processed. See the Braintree API response and try again.</p>
+      <p>Your test transaction has been successfully processed. See the Stripe API response and try again.</p>
 
     <a class="btn btn-secondary btn-lg btn-block" href="index.php" role="button">Test another transaction</a> 
 <?php
