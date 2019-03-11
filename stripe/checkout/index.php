@@ -27,8 +27,6 @@
 		<script>
 			document.querySelector('#amount').value = amount;
 		</script>
-
-
 			<script
 			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 			data-key="pk_test_AQ4KlxMSdDcegkIlXHVMKtap"

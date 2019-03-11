@@ -29,7 +29,7 @@
       return actions.order.capture().then(function(details) {
         //alert('Transaction completed by ' + details.payer.name.given_name);
         // Call your server to save the transaction
-        return fetch('<?php echo $baseUrl;?>paypal/server/checkout.php', {
+        return fetch('<?php echo $baseUrl;?>paypal/server/transaction.php', {
           method: 'post',
           body: JSON.stringify({
             orderID: data.orderID
