@@ -47,7 +47,7 @@
 			$json = json_decode($response, true);
 			$total_identity = $json["total"];  
 			$offsetIterations = $total_identity / 500;
-			/* Calculate number of offset itarations */
+			/* Calculate number of offset iterations */
 			if(is_int($offsetIterations)){} else { $offsetIterations = intval($offsetIterations) + 1; }
 		}
 		/*******************************************************************/
