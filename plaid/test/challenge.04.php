@@ -18,6 +18,11 @@
 			<li>has the word "first" in the name: <span id="total_name"></span></li>
 		</ul>
 		<?php
+		/* Credentials */
+		$client_id = "5cd9c98f5470830011c6a5e1";
+		$secret = "db72240dbcad0f121c96ead140cbc8";
+
+		/* API /institutions/get call */
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => "https://sandbox.plaid.com/institutions/get",
@@ -28,8 +33,8 @@
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			CURLOPT_CUSTOMREQUEST => "POST",
 			CURLOPT_POSTFIELDS => "{
-				\"client_id\": \"5cd9c98f5470830011c6a5e1\",
-				\"secret\": \"db72240dbcad0f121c96ead140cbc8\",
+				\"client_id\": \"$client_id\",
+				\"secret\": \"$secret\",
 				\"count\": 500,
 				\"offset\": 0,
 				\"options\": {\"products\":[\"identity\"]}
@@ -54,6 +59,7 @@
 		$currentOffset = 0;
 		$totalName = 0;
 		for($i = 0; $i <= $offsetIterations - 1; $i++) { 
+			/* API /institutions/get call */
 			$curl2 = curl_init();
 			curl_setopt_array($curl2, array(
 				CURLOPT_URL => "https://sandbox.plaid.com/institutions/get",
@@ -64,8 +70,8 @@
 				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 				CURLOPT_CUSTOMREQUEST => "POST",
 				CURLOPT_POSTFIELDS => "{
-					\"client_id\": \"5cd9c98f5470830011c6a5e1\",
-					\"secret\": \"db72240dbcad0f121c96ead140cbc8\",
+					\"client_id\": \"$client_id\",
+					\"secret\": \"$secret\",
 					\"count\": 500,
 					\"offset\": ". $currentOffset . ",
 					\"options\": {\"products\":[\"identity\"]}
