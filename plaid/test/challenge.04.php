@@ -22,7 +22,7 @@
 		$client_id = "5cd9c98f5470830011c6a5e1";
 		$secret = "db72240dbcad0f121c96ead140cbc8";
 
-		/* API /institutions/get call */
+		/* Get total  total number of institutions that support Plaid's identity product */
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => "https://sandbox.plaid.com/institutions/get",
@@ -51,17 +51,49 @@
 		} else {
 			$json = json_decode($response, true);
 			$total_identity = $json["total"];  
-			$offsetIterations = $total_identity / 500;
+		}
+		//=====> $total_identity
+
+		/* Get total number of offset iterations */
+		$curl2 = curl_init();
+		curl_setopt_array($curl2, array(
+			CURLOPT_URL => "https://sandbox.plaid.com/institutions/get",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => "{
+				\"client_id\": \"$client_id\",
+				\"secret\": \"$secret\",
+				\"count\": 500,
+				\"offset\": 0
+			}",			
+			CURLOPT_HTTPHEADER => array(
+				"Content-Type: application/json"
+			),
+		));
+		$response2 = curl_exec($curl2);
+		$err2 = curl_error($curl2);
+		curl_close($curl2);
+		if ($err2) {
+			echo "cURL Error #:" . $err2;
+		} else {
+			$json2 = json_decode($response2, true);
+			$total_names = $json2["total"];  
+			$offsetIterations = $total_names / 500;
 			/* Calculate number of offset iterations */
 			if(is_int($offsetIterations)){} else { $offsetIterations = intval($offsetIterations) + 1; }
 		}
-		/*******************************************************************/
+
+		/* Get total total number of institutions that have the word "first" in the name */
 		$currentOffset = 0;
 		$totalName = 0;
 		for($i = 0; $i <= $offsetIterations - 1; $i++) { 
 			/* API /institutions/get call */
-			$curl2 = curl_init();
-			curl_setopt_array($curl2, array(
+			$curl3 = curl_init();
+			curl_setopt_array($curl3, array(
 				CURLOPT_URL => "https://sandbox.plaid.com/institutions/get",
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING => "",
@@ -73,29 +105,29 @@
 					\"client_id\": \"$client_id\",
 					\"secret\": \"$secret\",
 					\"count\": 500,
-					\"offset\": ". $currentOffset . ",
-					\"options\": {\"products\":[\"identity\"]}
+					\"offset\": ". $currentOffset . "
 				}",			
 				CURLOPT_HTTPHEADER => array(
 					"Content-Type: application/json"
 				),
 			));
-			$response2 = curl_exec($curl2);
-			$err2 = curl_error($curl2);
-			curl_close($curl2);
-			if ($err2) {
-				echo "cURL Error #:" . $err2;
+			$response3 = curl_exec($curl3);
+			$err3 = curl_error($curl3);
+			curl_close($curl3);
+			if ($err3) {
+				echo "cURL Error #:" . $err3;
 			} else {
-				$json2 = json_decode($response2, true);			
-				$counter = count($json2["institutions"]);
+				$json3 = json_decode($response3, true);			
+				$counter = count($json3["institutions"]);
 				for($j = 0; $j <= $counter - 1; $j++) { 
-					$bank_name = $json2["institutions"][$j]["name"];  
-					if (strpos($bank_name, "first") !== false) {					
-						echo $totalName . " - " . $bank_name . "<br/>";
+					$bank_name = $json3["institutions"][$j]["name"];  
+					if (strpos($bank_name, "first") !== false) {
+						$nameCounter = $totalName + 1;					
+						echo $nameCounter . " - " . $bank_name . "<br/>";
 						$totalName++;
 					}
 				}
-				$counter2 = 0;
+				$counter3 = 0;
 			}
 			$currentOffset+=500;
 		}
