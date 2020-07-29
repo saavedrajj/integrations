@@ -1,0 +1,554 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+.top-info * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.top-info {
+  margin: 10px 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: normal;
+  color: #545454;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-info .info-ttl {
+  text-align: left;
+  margin: 0 0 13px;
+  line-height: 22px;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: normal;
+  color: #545454;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-info .info-ttl a,
+.top-info .info-ttl a:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.top-info .info-ttl img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-info .info-icn,
+.top-info .info-icn:hover,
+.top-info .info-icn:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-left: 3px;
+}
+
+.top-info .price-sec {
+  position: relative;
+  width: auto;
+  display: block;
+  vertical-align: top;
+  z-index: 9999;
+}
+
+.price-sec .details-price {
+  font-family: 'Poppins', sans-serif;
+  width: 320px;
+  position: relative;
+  margin: 0 0 15px 0;
+  padding: 15px;
+  text-align: center;
+  background: #F5F6F7;
+  border: solid 1px #f6f6f6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  max-width: 420px;
+  left: 8% !important;
+  color: #545454;
+  font-weight: normal;
+}
+
+
+/* .info-ttl:hover .details-price { display: block; } */
+
+.price-sec .details-price.showDown {
+  top: 103%;
+}
+
+.price-sec .details-price.showUp {
+    bottom: inherit;
+    top: 100%;
+    position: absolute;
+}
+
+.details-price.showDown {
+  top: 20px;
+}
+
+.price-sec .details-price>p {
+  font-size: 10px;
+  line-height: 16px;
+  color: #545454;
+  font-style: italic;
+  margin: 12px 0 10px;
+  font-weight: 300;
+}
+
+.price-sec .details-price .price-info {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 26px;
+  color: #545454;
+  margin-bottom: 2px !important;
+  position: relative;
+  font-weight: 600;
+  position:relative;
+  z-index: 1;
+}
+
+
+/* .price-sec .details-price .price-info:before { content: ""; position: absolute; width: 10px; height: 10px; background: #1DD2B6; top: 9px; left: 0; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px; } */
+
+.price-sec .details-price .price-info span {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 26px;
+  color: #545454;
+  margin-bottom: 2px !important;
+  position: relative;
+  font-weight: 600;
+}
+
+.price-sec .details-price ul.widget-tabs {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 0 10px;
+  padding-left: 0px;
+}
+
+.price-sec .details-price ul.widget-tabs li {
+  font-family: 'Poppins', sans-serif;
+  background: none;
+  font-size: 13px;
+  line-height: 20px;
+  color: #545454;
+  display: inline-block;
+  padding: 0px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom: solid 2px transparent;
+  font-weight: normal;
+  margin: 0 7px;
+}
+
+.price-sec .details-price ul.widget-tabs li.current {
+  color: #2864FF;
+  border-color: #2864FF;
+  cursor: inherit;
+}
+
+.price-sec .details-price .tab-content {
+  display: none;
+  width: 100%;
+  max-height: 170px;
+  overflow-y: auto;
+  z-index: 1;
+  position: relative
+}
+
+.price-sec .details-price .tab-content.current {
+  display: inherit;
+}
+
+.price-sec .details-price .price-sec {
+  width: 100%;
+  margin: 0 0 5px;
+  padding: 0px 0px 2px 0px;
+  display: inline-block;
+  border: solid 1px #2864FF;
+  background: #fff;
+ border-radius: 2px;
+}
+
+.price-sec .details-price .price-sec ul {
+  width: 100%;
+  display: inline-block;
+  margin: 5px 0 3px 0;
+  padding: 0;
+  vertical-align: middle;
+  list-style: none;
+}
+
+.price-sec .details-price .price-sec ul li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #545454;
+}
+
+.price-sec .details-price .price-sec ul li.month span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-right: 3px !important;
+  color: #2864FF;
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+.oplogo {
+  width: 80px;
+}
+
+
+/* .price-sec .details-price .price-sec:hover { background: rgb(131, 193, 187); background: -moz-linear-gradient(left, rgba(131, 193, 187, 1) 0%, rgba(80, 147, 156, 1) 100%); background: -webkit-linear-gradient(left, rgba(131, 193, 187, 1) 0%, rgba(80, 147, 156, 1) 100%); background: linear-gradient(to right, rgba(131, 193, 187, 1) 0%, rgba(80, 147, 156, 1) 100%); }
+
+.price-sec .details-price .price-sec:hover ul li, .price-sec .details-price .price-sec:hover ul li span { color: #fff; } */
+
+
+/* Responsive */
+
+@media only screen and (min-width: 768px) and (max-width: 1030px) {
+  .price-sec .details-price {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {}
+
+
+/* start fraction payment popup banner css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  /* visibility: hidden;
+
+  opacity: 0;*/
+  z-index: 999;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 0px;
+  background: none;
+  border-radius: 5px;
+  width: 500px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .content {
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+
+
+/* end fraction payment popup banner css */
+
+
+/*admin css*/
+
+.fraction {}
+
+.fraction .details-price {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.fraction .details-price img {
+  margin: 0;
+}
+
+.popup .content img {
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+.openpaypopupcenter {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #3c465a;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.openpaypopup-wrap {
+  width: 100%;
+  display: inline-block;
+  color: #3c465a;
+}
+
+.openpaypopup-head-block {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 25px 0 0 0;
+  text-align: center;
+  color: #3c465a;
+}
+
+.op_logopopup {
+  width: 125px;
+}
+
+.openpaypopup-wrap h1 {
+  color: #3c465a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  width: 400px;
+  margin: 18px auto 28px auto;
+  text-transform: inherit;
+}
+
+.openpaypopup-wrap h2 {
+  color: #3c465a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  margin: 30px auto;
+  text-transform: inherit;
+}
+
+.openpaypopup-wrap h5 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3c465a;
+  margin: 15px auto;
+  text-transform: inherit;
+}
+
+.openpaypopup-wrap p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  margin-bottom: 40px;
+  color: #3c465a;
+}
+
+.three-circle-blockpopup {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 0px;
+  background: #e1e1e1;
+  color: #3c465a;
+}
+
+.three-circle-blockpopup ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.three-circle-blockpopup ul li {
+  width: 160px;
+  display: inline-block;
+  padding: 30px 0px;
+  height: 160px;
+  color: #3c465a;
+  vertical-align: top;
+}
+
+.three-circle-blockpopup ul li img {
+  height: 44px;
+}
+
+.three-circle-blockpopup ul li p {
+  font-family: 'Poppins', sans-serif;
+  color: #3c465a;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  width: 100px;
+  margin: 5px auto;
+}
+
+.three-circle-blockpopup ul li+li p {
+  width: 110px;
+}
+
+.three-circle-blockpopup ul li+li+li p {
+  width: 70px;
+}
+
+.address-areapopup {
+  text-align: center;
+  width: 100%;
+  margin: 20px auto;
+  color: #3c465a;
+}
+
+.address-areapopup h3 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  font-size: 11px;
+  font-weight: 300;
+  width: 74%;
+  letter-spacing: 0.8px;
+  color: #3c465a;
+}
+
+.address-areapopup ul {
+  text-align: center;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.address-areapopup ul li {
+  font-family: 'Poppins', sans-serif;
+  color: #3c465a;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: left;
+  width: 150px;
+  margin: 0px;
+  list-style: disc;
+  float: none;
+  padding: 0px 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.address-areapopup ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 4px;
+  height: 4px;
+  background: #3c465a;
+  ;
+  border-radius: 50%;
+  bottom: 50%;
+}
+
+.popupimage .popup {
+  margin: 70px auto;
+  padding: 0px;
+  border-radius: 20px;
+  width: 500px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popupimage .popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 200ms;
+  z-index: 99;
+  opacity: 1;
+
+ 
+}
+
+.popupimage .popup .close img {  width: 24px;
+  height: 24px;}
+
+.popupimage .popup .close:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.learnmorepopup {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-decoration: underline;
+  padding-bottom: 2px;
+  color: #545454;
+}
+
+.openpaylogoleft {
+  margin-left: 0px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .openpaypopup-wrap h1 {
+    width: 302px;
+  }
+  .openpaypopup-wrap h5 {
+    font-size: 14px;
+  }
+  .three-circle-blockpopup ul li {
+    width: 95px;
+    font-size: 10px;
+    float: left;
+  }
+  .three-circle-blockpopup ul li+li {
+    width: 110px;
+    font-size: 10px;
+    float: none;
+    margin: 0 auto;
+  }
+  .three-circle-blockpopup ul li+li+li {
+    width: 95px;
+    font-size: 10px;
+    float: right;
+  }
+  .three-circle-blockpopup ul li+li p {
+    width: 110px;
+  }
+  .three-circle-blockpopup ul li p {
+    width: 70px;
+  }
+  .address-areapopup h3 {
+    width: 90%;
+    font-size: 10px;
+  }
+  .address-areapopup ul {
+    width: 100%
+  }
+  .address-areapopup ul li {
+    width: 135px;
+  }
+  .popupimage .popup {
+    width: 90%;
+  }
+}

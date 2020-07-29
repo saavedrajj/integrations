@@ -1,0 +1,54 @@
+{
+  "customerJourney": {
+    "origin": "Online",
+    "online": {
+      "callbackUrl": "https://www.openpay.co.uk/callback",
+      "cancelUrl": "https://www.openpay.co.uk/cancel",
+      "failUrl": "https://www.openpay.co.uk/fail",
+      "planCreationType": "Pending",
+      "chargeBackCount": -1,
+      "customerQuality": -1,
+      "customerDetails": {
+        
+        "firstName": "John", 
+        "otherNames": "",
+        "familyName": "Doe",
+        "email": "openpaybuyer@gmail.com",
+        "dateOfBirth": "01 Jan 1980",
+        "gender": "M",
+        "phoneNumber": "7654654563",
+        
+        "residentialAddress": {
+          "line1": "123 Regent Street",
+          "line2": "",
+          "suburb": "London",
+          "state": "Greater London",
+          "postCode": "W1B 5SA"
+        },
+        
+        "deliveryAddress": {
+          "line1": "2 Eastbourne Terrace",
+          "line2": "",
+          "suburb": "London",
+          "state": "Greater London",
+          "postCode": "W1D 4EG"
+        }
+      },
+      "deliveryDate": "10 May 2020"
+    }
+  },
+  "goodsDescription": "Goods description",
+  "purchasePrice": 5000,
+  "retailerOrderNo": "00000001",
+  "cart": [
+    {
+      "itemName": "Item name",
+      "itemGroup": "Item group",
+      "itemCode": "12345678",
+      "itemGroupCode": "1234567890123",
+      "itemRetailUnitPrice": 5000,
+      "itemQty": "1",
+      "itemRetailCharge": 0
+    }
+  ]
+}

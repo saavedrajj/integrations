@@ -1,0 +1,36 @@
+Client ID
+AWkb4xIZgEmY2zXdrIJ4EAKWF5XrWMVxu0Pwjfu_sRVBWnDIQiGeowrhcqXdCZ0st9-2frLzviaL_i4e
+
+Secret
+EMzPg5_MM2cNgSOJG0HJ926RGtWiG2-kSuMrkYUItuWNwFu78WmvGCbuqZIzOpsUwX1ltKsUaGJSx0TN
+
+
+Sandbox accounts
+saavedrajj_uk_personal@gmail.com
+saavedrajj_uk_business@gmail.com
+
+
+https://developer.paypal.com/docs/checkout/integrate/
+
+https://developer.paypal.com/docs/api/orders/v2/#orders_create
+
+transactionID
+6M345821UY006303M
+
+
+SMART INTEGRATION
+https://developer.paypal.com/demo/checkout/#/pattern/client
+
+samples
+
+
+https://github.com/paypal/paypal-checkout-components
+
+http://paypal.github.io/PayPal-PHP-SDK/sample/
+
+https://github.com/paypal/PayPal-PHP-SDK/tree/master/sample
+
+https://developer.paypal.com/docs/archive/checkout/how-to/server-integration/#how-a-server-integration-works
+
+
+https://www.paypal.com/apex/developer/expressCheckout/getAccessToken
